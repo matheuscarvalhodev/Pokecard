@@ -53,11 +53,11 @@ Acesse o aplicativo em seu navegador através do endereço [http://localhost:300
 
 
 ## Próximos passos
-Adicionar cards TCG para outras regiões de Pokémon.
-Aprimorar a funcionalidade de pesquisa, oferecendo mais opções de filtragem.
-Implementar recursos adicionais, como ordenação dos cards por número ou status base.
-Conectar o projeto com a api [PokeApi](https://pokeapi.co/), que possui as informações de todos os pokemons de todas as regiões.
-Melhorar o visual como um todo.
+- Adicionar cards TCG para outras regiões de Pokémon.
+- Aprimorar a funcionalidade de pesquisa, oferecendo mais opções de filtragem.
+- Implementar recursos adicionais, como ordenação dos cards por número ou status base.
+- Conectar o projeto com a api [PokeApi](https://pokeapi.co/), que possui as informações de todos os pokemons de todas as regiões.
+- Melhorar o visual como um todo.
 
 
 ## Contribuição
