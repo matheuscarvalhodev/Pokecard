@@ -1,0 +1,60 @@
+
+.container{
+    margin: 10px;
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid black;
+    background: linear-gradient(135deg, rgba(255,255,255,0.05),rgba(0,0,0,0.2));
+    backdrop-filter: blur(10px);
+    width: 80%;
+    display: grid;
+    gap: 10px;
+    place-items: center;
+  }
+  .pokedex-field{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pagination{
+    display: flex;
+    gap: 50px;
+    margin-top: 10px;
+  }
+
+  .pagination button{
+    width: 50px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .pagination button:active{
+    color: red;
+  }
+
+  .icon-pagination:hover{
+    animation: rotate 2s linear infinite;
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .active{
+    color: red;
+    font-weight: bold;
+  }
+
+  .first-last {
+    display: flex;
+  }

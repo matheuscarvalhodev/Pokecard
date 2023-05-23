@@ -1,0 +1,152 @@
+.card{
+    perspective: 1000px;
+    position: relative;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+.card .front{
+    position: relative;
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
+    transition: transform 0.4s linear;
+}
+.card .back{
+    position: absolute;
+    height: 300px;
+    width: 200px;
+    border: 2px solid black;
+    border-radius: 15px;
+    display: grid;
+    place-items: center;
+    padding: 10px;
+    background: rgb(252,239,70);
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    transition: transform 0.4s linear;
+}
+.card .front img{
+    border: 2px solid black;
+    border-radius: 15px;
+    margin-top: 3px;
+    height: 322px;
+    width: 220px;
+}
+
+.card.flipped .back{
+    transform: rotateY(0deg);
+}
+
+.card.flipped .front{
+    transform: rotateY(-180deg);
+}
+
+.icon-pokemon{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: linear-gradient(180deg, red 40%, white 60%);
+    border-radius: 50%;
+    border: 1px solid black;
+
+}
+
+.name-pokemon{
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    color: blue;
+    
+}
+
+.img-poke{
+    width:70%;
+
+}
+
+.div-poke{
+    display: grid;
+    place-items: center;
+    margin-top: 40px;
+    border-radius: 10px;
+    background: url("../../public/campo.png");
+    background-size: cover;
+    border: 2px solid black;
+}
+
+
+.types{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.type{
+    border: 1px solid black;
+    padding: 0 5px;
+    width: 50px;
+    display: grid;
+    place-items: center;
+    border-radius: 5px;
+    color: white;
+    font-size: 12px;
+}
+
+.info{
+    width: 90%;
+    padding: 15px 10px;
+    height: 70px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    gap: 10px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.info-poke{
+    display:grid;
+    place-items:center;
+    font-size:14px;
+    font-weight: bold;
+    gap: 5px;
+}
+
+.info p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.info-status{
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.progress-bar {
+    margin-top: -3px;
+    display: grid;
+    grid-template-columns: 2fr 2.5fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 5px;
+    font-size: 9px;
+  }
+  
+  .progress-bar__label {
+    font-weight: bold;
+  }
+  
+  .progress-bar__container {
+    background-color: #ddd;
+    height: 6px;
+    margin-top: 5px;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .progress-bar__fill {
+    height: 100%;
+
+  }
+  
+  
