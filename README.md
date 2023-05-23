@@ -1,5 +1,5 @@
 <h1 align="center"> Pokecard </h1>
-<img align="center" width="571" alt="image" src="![pokecard](https://github.com/matheuscarvalhodev/Pokecard/assets/50754185/d568456b-fbe5-4bb7-878a-a1c0fd74b0dd)">
+<img width="766" alt="image" src="https://github.com/matheuscarvalhodev/Pokecard/assets/50754185/76c4f238-71d7-4cc9-8ae0-ecfad54a984f">
 
 O Pokecard é um projeto pessoal, desenvolvido em React/Typescript, que tem como objetivo exibir os cards do TCG (Trading Card Game) de cada Pokémon existente, juntamente com informações relevantes, como número do Pokémon, status base, nome e tipo. Atualmente, o projeto conta com os 151 Pokémon da região de Kanto, mas há planos para adicionar mais regiões no futuro.
 
