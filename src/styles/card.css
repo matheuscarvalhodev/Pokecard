@@ -15,18 +15,22 @@
     position: absolute;
     height: 300px;
     width: 200px;
-    border: 2px solid black;
+    box-shadow: 5px 5px 5px black;
     border-radius: 15px;
     display: grid;
     place-items: center;
     padding: 10px;
-    background: rgb(252,239,70);
+    background: linear-gradient(270deg, #fff375, #f8c22d, #ffcf25);
+    background-size: 600% 600%;
+    -webkit-animation: AnimationName 9s ease infinite;
+    -moz-animation: AnimationName 9s ease infinite;
+    animation: AnimationName 9s ease infinite;
     transform: rotateY(180deg);
     backface-visibility: hidden;
     transition: transform 0.4s linear;
 }
 .card .front img{
-    border: 2px solid black;
+    box-shadow: 5px 5px 5px black;
     border-radius: 15px;
     margin-top: 3px;
     height: 322px;

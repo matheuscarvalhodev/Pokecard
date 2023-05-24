@@ -9,6 +9,8 @@ function App() {
     <div className="App">
       <Header/>
       <Pokedex/>
+      <img className='poke-bg' src="./pokeballs-bg.png" alt="" />
+      <img className='potion' src="./potion.png" alt="" />
     </div>
   );
 }

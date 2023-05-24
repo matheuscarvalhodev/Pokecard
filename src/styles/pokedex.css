@@ -1,15 +1,17 @@
 
 .container{
     margin: 10px;
+    margin-bottom: 40px;
     padding: 20px;
     border-radius: 15px;
-    border: 2px solid black;
-    background: linear-gradient(135deg, rgba(255,255,255,0.05),rgba(0,0,0,0.2));
+    box-shadow: 5px 5px 15px black;
+    background: linear-gradient(135deg, rgba(255,255,255,0.4),rgba(0,0,0,0.05));
     backdrop-filter: blur(10px);
     width: 80%;
     display: grid;
     gap: 10px;
     place-items: center;
+    z-index: 1;
   }
   .pokedex-field{
     display: flex;

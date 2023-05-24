@@ -1,29 +1,55 @@
 .header{
     background: url("../../public/poke.jpg");
-    background-position: right;
+    background-position: bottom right;
     background-color: white;
-    background-size: 350px 150px;
+    background-size: 400px 180px;
     background-repeat: no-repeat;
-    width: 83%;
-    height: 150px;
-    border: 2px solid black;
-    border-radius: 15px;
-    margin: 10px 0;
+    width: 100%;
+    height: 250px;
+    position: absolute;
+	left: 0;
+	bottom: 2.5em;
     display: flex;
+    justify-content: center;
     align-items: center;
     position: relative;
+    z-index: 1;
+    transform: skewY(-3.5deg);
+    border-bottom: 10px solid black;
 }
 
 .logo{
-    position: relative;
+    position: absolute;
     width: 40%;
-    margin-left: 10%;
+    left: 5em;
     
 }
 
 .psyduck{
-    width: 50px;
+    width: 65px;
     position: absolute;
     left: -10px;
     bottom: -15px;
+}
+.psyduck img{
+    width: 100%;
+}
+.psyduck .interrogacao{
+    position: absolute;
+    left: 50%;
+    top: -20px;
+    rotate: 20deg;
+    width: 30px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.psyduck:hover .interrogacao{
+    opacity: 1;
+
+}
+.pokeball{
+    width: 75px;
+    position: absolute;
+    bottom: -42px;
+    rotate: -1deg;
 }
