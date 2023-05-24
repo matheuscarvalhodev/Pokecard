@@ -9,15 +9,24 @@ import { CgPokemon } from "react-icons/cg";
 const PAGE_SIZE = 10;
 const DISPLAY_PAGES = 5;
 
-function sortPokemonKeys(pokemonKeys: string[]) {
+interface Pokedex{
+  color: (flagColor:boolean) => void;
+}
+
+function sortPokemonKeys(pokemonKeys: string[], ascending: boolean = true) {
   return pokemonKeys.sort((a, b) => {
     const numA = parseInt(a);
     const numB = parseInt(b);
-    return numA - numB;
+
+    if (!ascending) {
+      return numA - numB;
+    } else {
+      return numB - numA;
+    }
   });
 }
 
-const Pokedex: React.FC = () => {
+const Pokedex: React.FC<Pokedex> = ({color}) => {
   const [selectedTypes, setSelectedTypes] = useState<string[]>([]);
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [currentPage, setCurrentPage] = useState<number>(1);
@@ -25,9 +34,10 @@ const Pokedex: React.FC = () => {
   const [pageNumbers, setPageNumbers] = useState<number[]>([]);
   const [showTCG, setShowTCG] = useState<boolean>(false);
   const [totalFilteredPokemons, setTotalFilteredPokemons] = useState<number>(0);
+  const [sort, setSort] = useState<boolean>(false);
 
 
-  const sortedKeys = sortPokemonKeys(Object.keys(pokemons));
+  const sortedKeys = sortPokemonKeys(Object.keys(pokemons), sort);
 
   useEffect(() => {
     const filterPokemons = () => {
@@ -47,7 +57,7 @@ const Pokedex: React.FC = () => {
         return true;
       });
       setFilteredKeys(filtered);
-      setTotalFilteredPokemons(filtered.length); // Atualiza o número total de Pokémon filtrados
+      setTotalFilteredPokemons(filtered.length);
     };
 
     filterPokemons();
@@ -90,6 +100,10 @@ const Pokedex: React.FC = () => {
     setCurrentPage(1);
   };
 
+  const handleOrdering = (ord:boolean) => {
+    setSort(ord);
+  }
+
   const handleSearch = (searchTerm: string) => {
     setSearchTerm(searchTerm);
     setCurrentPage(1);
@@ -106,13 +120,14 @@ const Pokedex: React.FC = () => {
   };
 
   const goToLastPage = () => {
-    const totalPages = Math.ceil(totalFilteredPokemons / PAGE_SIZE); // Usa o número total de Pokémon filtrados
+    const totalPages = Math.ceil(totalFilteredPokemons / PAGE_SIZE);
     setCurrentPage(totalPages);
   };
 
 
   const handleToggleTCG = (checked: boolean) => {
     setShowTCG(checked);
+    color(checked);
   };
 
   const startIndex = (currentPage - 1) * PAGE_SIZE;
@@ -122,7 +137,7 @@ const Pokedex: React.FC = () => {
   return (
     <>
       <div className="container">
-        <Filter selectedTypes={selectedTypes} onTypeChange={handleTypeChange} onSearch={handleSearch} onReset={handleReset} onToggleTCG={handleToggleTCG} showTCG={showTCG} />
+        <Filter selectedTypes={selectedTypes} onTypeChange={handleTypeChange} onSearch={handleSearch} onReset={handleReset} onToggleTCG={handleToggleTCG} showTCG={showTCG} onSort={handleOrdering} isSort={sort}  />
         <div className="pokedex-field">
           {pokemonsToDisplay.map((pokemonNumber: string) => {
             const pokemon = pokemons[pokemonNumber as keyof typeof pokemons];

@@ -7,13 +7,20 @@
   position: relative;
   display: grid;
   place-items: center;
-  background: linear-gradient(270deg, #efdd25, #2543ef);
-  background-size: 400% 400%;
-
-  -webkit-animation: AnimationName 30s ease infinite;
-  -moz-animation: AnimationName 30s ease infinite;
-  animation: AnimationName 30s ease infinite;
+  background-size: 600% 600%;
+  -webkit-animation: AnimationName 19s ease infinite;
+  -moz-animation: AnimationName 19s ease infinite;
+  animation: AnimationName 19s ease infinite;
   min-height: 100vh;
+
+}
+
+.to-red {
+  background: linear-gradient(270deg, #ffb5ae, #f37272, #ef2a2a);
+}
+
+.to-blue {
+  background: linear-gradient(270deg, #aeb7ff, #727ff3, #2a3eef);
 }
 
 @-webkit-keyframes AnimationName {

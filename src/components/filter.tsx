@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../styles/filter.css";
 import { AiOutlineSearch } from "react-icons/ai";
+import { BsSortNumericDownAlt, BsSortNumericDown } from "react-icons/bs";
 import { RxReset } from "react-icons/rx";
 
 type FilterProps = {
@@ -8,8 +9,10 @@ type FilterProps = {
   onTypeChange: (type: string, checked: boolean) => void;
   onSearch: (searchTerm: string) => void;
   onReset: () => void;
-  onToggleTCG: (showTCG: boolean) => void; // Adicionando a prop para lidar com a mudança do valor do TCG
-  showTCG: boolean; // Valor atual do TCG
+  onToggleTCG: (showTCG: boolean) => void;
+  onSort: (sort: boolean) => void;
+  showTCG: boolean;
+  isSort: boolean;
 };
 
 const pokemonTypes: string[] = [
@@ -39,6 +42,8 @@ const Filter: React.FC<FilterProps> = ({
   onReset,
   onToggleTCG,
   showTCG,
+  onSort,
+  isSort
 }) => {
   const [searchTerm, setSearchTerm] = useState<string>("");
 
@@ -59,6 +64,11 @@ const Filter: React.FC<FilterProps> = ({
   const handleToggleTCG = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { checked } = event.target;
     onToggleTCG(checked);
+  };
+
+  const handleSort = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { checked } = event.target;
+    onSort(checked);
   };
 
   return (
@@ -93,6 +103,15 @@ const Filter: React.FC<FilterProps> = ({
             <RxReset size={35} />
             Reset
           </button>
+          <div className="switch-container">
+          <button className="button-form">
+            <label className="switch sort">
+              <input type="checkbox" checked={isSort} onChange={handleSort}/>
+              <span className="check-sort">{isSort ?  <BsSortNumericDown size={30}/> : <BsSortNumericDownAlt size={30}/>}</span>
+            </label>
+            <span className="">Sort Cards</span>
+          </button>
+        </div>
         </div>
         <div className="switch-container">
           <label className="switch">
@@ -101,6 +120,7 @@ const Filter: React.FC<FilterProps> = ({
           </label>
           <span className="switch-label">Rotate Cards</span>
         </div>
+        
       </div>
     </div>
   );
