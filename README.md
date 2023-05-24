@@ -12,6 +12,7 @@ O Pokecard é um projeto pessoal, desenvolvido em React/Typescript, que tem como
   <img width="600" alt="image" src="https://github.com/matheuscarvalhodev/Pokecard/assets/50754185/01f23c70-9174-456b-8f88-df650a1e497f">
 </div>
 
+
 <div align="center">
  <p> Quando o switch esta como Info Poke </p>
 <img width="600" alt="image" src="https://github.com/matheuscarvalhodev/Pokecard/assets/50754185/d91637da-1ca4-432f-8ecf-cd96e309366e">
@@ -32,7 +33,7 @@ Visualização dos cards TCG de cada Pokémon com informações detalhadas.
 Filtro de Pokémon por tipo, permitindo a seleção de múltiplos tipos.
 Rotação dos cards individualmente para visualização dos dois lados.
 Pesquisa por nome do Pokémon ou parte da palavra, facilitando a localização de Pokémon específicos.
-Switch que alterna os lados de todos os cards simultaneamente.
+Switch que alterna os lados de todos os cards simultaneamente. E adicionado a ordenação: crescente ou decrescente!
 
 <div align="center">
 <img width="744" alt="image" src="https://github.com/matheuscarvalhodev/Pokecard/assets/50754185/611b2f42-d193-479b-b6f4-4092bd7b5f3f">
