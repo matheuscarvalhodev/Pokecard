@@ -8,6 +8,7 @@ O Pokecard é um projeto pessoal, desenvolvido em React/Typescript, que tem como
 <div align="center">
 <img width="600" alt="image" src="https://github.com/matheuscarvalhodev/Pokecard/assets/50754185/357fa9ac-e1f7-4976-b276-3db93a273e67">
  <img width="600" alt="image" src="https://github.com/matheuscarvalhodev/Pokecard/assets/50754185/98c3bbe3-4f0d-479c-a296-7c0f7ef7ebc8">
+  <img width="600" alt="image" src="https://github.com/matheuscarvalhodev/Pokecard/assets/50754185/01f23c70-9174-456b-8f88-df650a1e497f">
 </div>
 
 
