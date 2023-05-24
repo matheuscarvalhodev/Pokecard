@@ -6,7 +6,9 @@
 O Pokecard é um projeto pessoal, desenvolvido em React/Typescript, que tem como objetivo exibir os cards do TCG (Trading Card Game) de cada Pokémon existente, juntamente com informações relevantes, como número do Pokémon, status base, nome e tipo. Atualmente, o projeto conta com os 151 Pokémon da região de Kanto, mas há planos para adicionar mais regiões no futuro.
 
 <div align="center">
-<img width="700" alt="image" src="https://github.com/matheuscarvalhodev/Pokecard/assets/50754185/a5964131-82ba-4ee4-b324-450313e6d05c">
+<img width="600" alt="image" src="https://github.com/matheuscarvalhodev/Pokecard/assets/50754185/357fa9ac-e1f7-4976-b276-3db93a273e67">
+ <img width="600" alt="image" src="https://github.com/matheuscarvalhodev/Pokecard/assets/50754185/98c3bbe3-4f0d-479c-a296-7c0f7ef7ebc8">
+  <img width="600" alt="image" src="https://github.com/matheuscarvalhodev/Pokecard/assets/50754185/01f23c70-9174-456b-8f88-df650a1e497f">
 </div>
 
 
@@ -25,7 +27,7 @@ Pesquisa por nome do Pokémon ou parte da palavra, facilitando a localização d
 Switch que alterna os lados de todos os cards simultaneamente.
 
 <div align="center">
-<img width="749" alt="image" src="https://github.com/matheuscarvalhodev/Pokecard/assets/50754185/94fcaa09-decb-42ef-a089-bebdc00912b5">
+<img width="748" alt="image" src="https://github.com/matheuscarvalhodev/Pokecard/assets/50754185/d0f0377a-7c2c-496a-8093-80a9b591bf97">
 </div>
 
 
@@ -40,7 +42,7 @@ Paginação, mostrando máximo de 10 cards por pagina, seja com ou sem filtro, e
 
 - ``React``
 - ``Typescript``
-- ``Styled Componente e Pure CSS``
+- ``Pure CSS``
 - ``Paradigma de orientação a objetos``
 - ``Clean Code e Clean Architecture``
 
@@ -58,6 +60,7 @@ Acesse o aplicativo em seu navegador através do endereço [http://localhost:300
 - Implementar recursos adicionais, como ordenação dos cards por número ou status base.
 - Conectar o projeto com a api [PokeApi](https://pokeapi.co/), que possui as informações de todos os pokemons de todas as regiões.
 - Melhorar o visual como um todo.
+- Aplicar responsividade total no projeto
 
 
 ## Contribuição
