@@ -64,7 +64,7 @@
 }
 
 .img-poke{
-    width:70%;
+    width:60%;
 
 }
 
@@ -72,6 +72,8 @@
     display: grid;
     place-items: center;
     margin-top: 40px;
+    height: 120px;
+    width: 95%;
     border-radius: 10px;
     background: url("../../public/campo.png");
     background-size: cover;
@@ -96,23 +98,31 @@
     font-size: 12px;
 }
 
+.info-container{
+    background-color: white;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    font-size:14px;
+    font-weight: bold;
+    padding-top: 5px;
+}
+
 .info{
     width: 90%;
-    padding: 15px 10px;
+    padding: 10px 10px;
     height: 70px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     place-items: center;
     gap: 10px;
-    background-color: white;
-    border-radius: 10px;
+
 }
 
 .info-poke{
     display:grid;
     place-items:center;
-    font-size:14px;
-    font-weight: bold;
+    font-size: 12px !important;
     gap: 5px;
 }
 
@@ -123,7 +133,7 @@
 .info-status{
     display: flex;
     flex-direction: column;
-    font-size: 10px;
+    font-size: 10px !important;
     font-weight: bold;
 }
 

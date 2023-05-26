@@ -183,3 +183,64 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+
+.region{
+  display: grid;
+  place-items: center;
+  color: white;
+}
+.custom-select {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.custom-select select {
+  height: 40px;
+  margin-left: 10px;
+  border-radius: 5px;
+  appearance: none;
+  width: 150px;
+  background-color: #727ff3;
+  color: white;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: 5px;
+  padding-left: 45px;
+  font-size: 16px;
+  border: 2px solid black;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.check select{
+  background-color: rgb(244, 145, 145);
+  color: black;
+}
+
+.custom-select .select-arrow {
+  position: absolute;
+  top: 4px;
+  left: 20px;
+  pointer-events: none;
+  align-self: center;
+}
+
+.custom-select .select-arrow svg {
+  opacity: 30%;
+  width: 30px;
+}
+
+.custom-select select:focus + .select-arrow svg {
+  opacity: 100%;
+  animation: rotation 2s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

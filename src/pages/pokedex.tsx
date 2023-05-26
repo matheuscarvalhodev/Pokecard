@@ -9,8 +9,8 @@ import { CgPokemon } from "react-icons/cg";
 const PAGE_SIZE = 10;
 const DISPLAY_PAGES = 5;
 
-interface Pokedex{
-  color: (flagColor:boolean) => void;
+interface Pokedex {
+  color: (flagColor: boolean) => void;
 }
 
 function sortPokemonKeys(pokemonKeys: string[], ascending: boolean = true) {
@@ -26,7 +26,7 @@ function sortPokemonKeys(pokemonKeys: string[], ascending: boolean = true) {
   });
 }
 
-const Pokedex: React.FC<Pokedex> = ({color}) => {
+const Pokedex: React.FC<Pokedex> = ({ color }) => {
   const [selectedTypes, setSelectedTypes] = useState<string[]>([]);
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [currentPage, setCurrentPage] = useState<number>(1);
@@ -35,7 +35,12 @@ const Pokedex: React.FC<Pokedex> = ({color}) => {
   const [showTCG, setShowTCG] = useState<boolean>(false);
   const [totalFilteredPokemons, setTotalFilteredPokemons] = useState<number>(0);
   const [sort, setSort] = useState<boolean>(false);
+  const [selectedRegion, setSelectedRegion] = useState<string>("All");
 
+  const handleRegionChange = (region: string) => {
+    setSelectedRegion(region);
+    setCurrentPage(1);
+  };
 
   const sortedKeys = sortPokemonKeys(Object.keys(pokemons), sort);
 
@@ -51,6 +56,10 @@ const Pokedex: React.FC<Pokedex> = ({color}) => {
         }
 
         if (!pokemonName.includes(searchQuery)) {
+          return false;
+        }
+
+        if (selectedRegion !== "All" && pokemon.region !== selectedRegion) {
           return false;
         }
 
@@ -100,7 +109,7 @@ const Pokedex: React.FC<Pokedex> = ({color}) => {
     setCurrentPage(1);
   };
 
-  const handleOrdering = (ord:boolean) => {
+  const handleOrdering = (ord: boolean) => {
     setSort(ord);
   }
 
@@ -137,7 +146,8 @@ const Pokedex: React.FC<Pokedex> = ({color}) => {
   return (
     <>
       <div className="container">
-        <Filter selectedTypes={selectedTypes} onTypeChange={handleTypeChange} onSearch={handleSearch} onReset={handleReset} onToggleTCG={handleToggleTCG} showTCG={showTCG} onSort={handleOrdering} isSort={sort}  />
+        <Filter selectedTypes={selectedTypes} onTypeChange={handleTypeChange} onSearch={handleSearch} onReset={handleReset} onToggleTCG={handleToggleTCG} showTCG={showTCG} onSort={handleOrdering} isSort={sort} selectedRegion={selectedRegion}
+          onRegionChange={handleRegionChange} />
         <div className="pokedex-field">
           {pokemonsToDisplay.map((pokemonNumber: string) => {
             const pokemon = pokemons[pokemonNumber as keyof typeof pokemons];
@@ -148,6 +158,7 @@ const Pokedex: React.FC<Pokedex> = ({color}) => {
                 numero={pokemonNumber}
                 tipos={pokemon.type}
                 status={pokemon.baseStats}
+                region={pokemon.region}
                 showTCG={showTCG}
               />
             );
