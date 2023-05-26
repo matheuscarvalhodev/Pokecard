@@ -7,17 +7,17 @@ O Pokecard é um projeto pessoal, desenvolvido em React/Typescript, que tem como
 
 <div align="center">
  <p> Quando o switch esta como TCG Card </p>
-<img width="600" alt="image" src="https://github.com/matheuscarvalhodev/Pokecard/assets/50754185/2bbfab2f-d7b5-48dd-b4de-9bbb824cd75f">
- <img width="600" alt="image" src="https://github.com/matheuscarvalhodev/Pokecard/assets/50754185/98c3bbe3-4f0d-479c-a296-7c0f7ef7ebc8">
-  <img width="600" alt="image" src="https://github.com/matheuscarvalhodev/Pokecard/assets/50754185/01f23c70-9174-456b-8f88-df650a1e497f">
+<img width="600" alt="image" src="https://github.com/matheuscarvalhodev/Pokecard/assets/50754185/23f5773e-383c-41b9-b9f3-c1d519a00b39">
+ <img width="600" alt="image" src="https://github.com/matheuscarvalhodev/Pokecard/assets/50754185/52e6684b-d518-45a3-ba99-642d1e4f7866">
+  <img width="600" alt="image" src="https://github.com/matheuscarvalhodev/Pokecard/assets/50754185/134501ba-ac79-430a-8988-2c27e548a1b3">
 </div>
 
 
 <div align="center">
  <p> Quando o switch esta como Info Poke </p>
-<img width="600" alt="image" src="https://github.com/matheuscarvalhodev/Pokecard/assets/50754185/d91637da-1ca4-432f-8ecf-cd96e309366e">
- <img width="600" alt="image" src="https://github.com/matheuscarvalhodev/Pokecard/assets/50754185/64f2b879-188e-423d-9086-1ebe0ff67c04">
- <img width="600" alt="image" src="https://github.com/matheuscarvalhodev/Pokecard/assets/50754185/2f7084fd-e0fb-4775-aab1-6b9d00f5c1db">
+<img width="600" alt="image" src="https://github.com/matheuscarvalhodev/Pokecard/assets/50754185/eadfde0a-817b-4a66-8315-2e67020cd58e">
+<img width="600" alt="image" src="https://github.com/matheuscarvalhodev/Pokecard/assets/50754185/3a102106-1c34-4196-b2fb-b2302be98b79">
+<img width="600" alt="image" src="https://github.com/matheuscarvalhodev/Pokecard/assets/50754185/c449f415-46c6-4b60-85cf-8b5bd3e60530">
 </div>
 
 
@@ -25,8 +25,7 @@ O Pokecard é um projeto pessoal, desenvolvido em React/Typescript, que tem como
 Visualização dos cards TCG de cada Pokémon com informações detalhadas.
 
 <div align="center">
-<img width="174" alt="image" src="https://github.com/matheuscarvalhodev/Pokecard/assets/50754185/b193f08a-2279-4243-9d66-5631b8a5d762">
-<img width="174" alt="image" src="https://github.com/matheuscarvalhodev/Pokecard/assets/50754185/4f408fbb-57ac-4a93-84e9-ff3fb1051acd">
+<img width="347" alt="image" src="https://github.com/matheuscarvalhodev/Pokecard/assets/50754185/00581d65-7994-4cd7-8f9e-7cb418daeffc">
 </div>
 
 
@@ -36,8 +35,8 @@ Pesquisa por nome do Pokémon ou parte da palavra, facilitando a localização d
 Switch que alterna os lados de todos os cards simultaneamente. E adicionado a ordenação: crescente ou decrescente!
 
 <div align="center">
-<img width="744" alt="image" src="https://github.com/matheuscarvalhodev/Pokecard/assets/50754185/611b2f42-d193-479b-b6f4-4092bd7b5f3f">
- <p>Adição do botão de ordenação no filtro</p>
+<img width="746" alt="image" src="https://github.com/matheuscarvalhodev/Pokecard/assets/50754185/d07a327a-be6a-40b7-8f16-e8e7633cd387">
+ <p>Adição do botão de ordenação no filtro e do filtro por Região</p>
 </div>
 
 
@@ -65,9 +64,10 @@ Acesse o aplicativo em seu navegador através do endereço [http://localhost:300
 
 
 ## Próximos passos
-- Adicionar cards TCG para outras regiões de Pokémon.
-- Aprimorar a funcionalidade de pesquisa, oferecendo mais opções de filtragem. (:white_check_mark: Ordenação aplicada! Se tiver mais ideias para a filtragem, é só entrar em contato!)
-- Implementar recursos adicionais, como ordenação dos cards por número ou status base.
+- Adicionar cards TCG para outras regiões de Pokémon.(:white_check_mark:região de Johto adicionado!)
+- Aprimorar a funcionalidade de pesquisa, oferecendo mais opções de filtragem. (:white_check_mark: Ordenação e filtro por Região adicionados! Se tiver mais ideias para a filtragem, é só entrar em contato!)
+- Implementar recursos adicionais, favoritar pokemons, criar times, adicionar pagina de fraquezas e vantagens.
+- Adicionar uma página para criar um nome ou frase utilizando o Pokemon Unown. (Unwon é um tipo de pokemon que possui o formato de letras do alfabeto, vai ser divertido)
 - Conectar o projeto com a api [PokeApi](https://pokeapi.co/), que possui as informações de todos os pokemons de todas as regiões.
 - Melhorar o visual como um todo. (:white_check_mark: Visual alterado! Mas se você tiver uma sugestão, envie uma solicitação!)
 - Aplicar responsividade total no projeto
